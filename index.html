@@ -9,6 +9,7 @@
         <input type="text" id="inputId" />
         <button type="button" id="submitId">Validate</button>
         <div id="result">Output:</div>
+        <div id="reversed">Reversed:</div>
     </body>
 </html>
 
@@ -24,13 +25,14 @@ $(document).ready(function(){
             // if(i == start){
             //     arr[i] = "X";
             // }else{
-            //     arr[i] =+ arr[i];
+                arr[i] =+ arr[i];
             // }
+            arr.reverse()
             console.log(arr[i]);
         } 
-        arr.reverse();
         // console.log(arr);
         $("#result").text("Output: " + arr);
+        $("#reversed").text("Reversed: " + arr.reverse());
     });
 });
 </script>
