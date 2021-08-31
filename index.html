@@ -6,19 +6,24 @@
     
     <body>
         <label>Input:</label>
-        <input type="text" id="inputId">
+        <input type="text" id="inputId" />
         <button type="button" id="submitId">Validate</button>
+        <div id="result">Output:</div>
     </body>
 </html>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 <script>
 $(document).ready(function(){
     $("#submitId").click(function(){
         var input = $("#inputId").val();
         var arr = input.toString().split('');
-        for (i = 0; i < arr.length; i++) arr[i] = +arr[i] | 0;
-        console.log(arr);
+        for (i = 0; i < arr.length; i++){
+            arr[i] = +arr[i] | 0;
+        } 
+        // console.log("Output: " + arr);
+        $("#result").text("Output: " + arr);
     });
 });
 </script>
