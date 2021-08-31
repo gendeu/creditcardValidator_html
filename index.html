@@ -20,9 +20,16 @@ $(document).ready(function(){
         var input = $("#inputId").val();
         var arr = input.toString().split('');
         for (i = 0; i < arr.length; i++){
-            arr[i] = +arr[i] | 0;
+            // var start = arr.length - 2;
+            // if(i == start){
+            //     arr[i] = "X";
+            // }else{
+            //     arr[i] =+ arr[i];
+            // }
+            console.log(arr[i]);
         } 
-        // console.log("Output: " + arr);
+        arr.reverse();
+        // console.log(arr);
         $("#result").text("Output: " + arr);
     });
 });
